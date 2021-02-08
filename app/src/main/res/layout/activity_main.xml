@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Welcome"
+        android:textColor="@color/white"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -86,18 +88,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Login"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="25dp"
-            app:backgroundTint="@android:color/holo_green_light" />
-        <Button
-            android:id="@+id/register_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@android:color/holo_green_light"
-            android:text="Register"
-            android:textColor="@color/black"
-            android:textSize="25dp" />
+            app:backgroundTint="#1FB598" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
