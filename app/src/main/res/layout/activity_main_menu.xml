@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> master
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".MainMenu"
     android:background="@drawable/background"
     >
@@ -195,3 +200,8 @@
 
 </RelativeLayout>
 
+=======
+    tools:context=".MainMenu">
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> master

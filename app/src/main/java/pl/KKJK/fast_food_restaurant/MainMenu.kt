@@ -1,16 +1,22 @@
 package pl.KKJK.fast_food_restaurant
 
+<<<<<<< HEAD
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.cardview.widget.CardView
+=======
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+>>>>>>> master
 
 class MainMenu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
     }
+<<<<<<< HEAD
 
     fun goToCorrectSubMenu(view: View){
         if (view.id == R.id.drinks_card){
@@ -34,4 +40,6 @@ class MainMenu : AppCompatActivity() {
             var type = "Salad"
         }
     }
+=======
+>>>>>>> master
 }
