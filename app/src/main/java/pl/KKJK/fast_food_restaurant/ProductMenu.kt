@@ -1,48 +1,50 @@
 package pl.KKJK.fast_food_restaurant
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.ViewGroup
-import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 
 class ProductMenu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_menu)
 
-        var listView = findViewById<ListView>(R.id.main_listview)
+        val list = findViewById<ListView>(R.id.product_listView)
+        var items = mutableListOf<Product>()
 
-        listView.adapter = ProductAdapter(this)
-    }
+        val type = intent.getStringExtra(MainMenu.EXTRA_VALUE_NAME_1)
 
-    private class ProductAdapter(context: Context): BaseAdapter() {
 
-        private var mContext:Context
+        for(product in Products.products){
+            if(type == product.category)
+            {
+                val name = product.name
+                val descripton = product.description
+                val price = product.price
+                val category = product.category
 
-        init {
-            this.mContext = context
+                val item = Product(name, descripton, price, category)
+
+                items.add(item)
+            }
+
+            println(type)
         }
 
-        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            val textView = TextView(mContext)
-            return textView
-        }
+        val adapter = CustomAdapter(this, R.layout.product_listview, items)
 
-        override fun getItem(position: Int): Any {
-            return Products.products
-        }
+        list.adapter = adapter
 
-        override fun getItemId(position: Int): Long {
-            return position.toLong()
-        }
+        list.setOnItemClickListener { parent, view, position, id ->
 
-        override fun getCount(): Int {
-            return Products.products.size
-        }
+            val alert = AlertDialog.Builder(this)
 
+            alert.setMessage("Dodano do koszyka").show()
+
+            return@setOnItemClickListener
+        }
     }
 }

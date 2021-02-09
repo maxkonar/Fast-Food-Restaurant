@@ -3,8 +3,8 @@ package pl.KKJK.fast_food_restaurant
 object Packs {
    val packs: List<Pack> = listOf(
            Pack(
-                   name = "gfdssgfds",
-                   price = 23,
+                   name = " ",
+                   price = 1,
                    position = emptyList()
            )
    )
