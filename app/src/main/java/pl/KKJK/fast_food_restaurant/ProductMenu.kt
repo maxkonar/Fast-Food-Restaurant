@@ -1,6 +1,5 @@
 package pl.KKJK.fast_food_restaurant
 
-import android.content.ClipData
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
@@ -31,6 +30,7 @@ class ProductMenu : AppCompatActivity() {
 
                 items.add(item)
             }
+
         }
 
         val adapter = CustomAdapter(this, R.layout.product_listview, items)
@@ -39,7 +39,9 @@ class ProductMenu : AppCompatActivity() {
 
         list.setOnItemClickListener { parent, view, position, id ->
 
+            val alert = AlertDialog.Builder(this)
 
+            alert.setMessage("Dodano do koszyka").show()
 
             return@setOnItemClickListener
         }
